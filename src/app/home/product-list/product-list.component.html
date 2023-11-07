@@ -1,0 +1,8 @@
+<h1>Videogames</h1>
+<div *ngFor="let videogame of videogames">
+  <h3>{{ videogame.title }}</h3>
+  <p>{{ videogame.genre }}</p>
+  <p>{{ videogame.year }}</p>
+  <p>{{ videogame.country }}</p>
+  <img src="{{ videogame.image }}" alt="{{ videogame.title }}" />
+</div>

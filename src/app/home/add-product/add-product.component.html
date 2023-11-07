@@ -1,0 +1,37 @@
+<h2>Sube un nuevo videojuego</h2>
+<input placeholder="Insert videogame title" type="text" [(ngModel)]="title" />
+<input placeholder="Insert videogame genre" type="text" [(ngModel)]="genre" />
+<input placeholder="Insert videogame year" type="number" [(ngModel)]="year" />
+<input
+  placeholder="Insert videogame country"
+  type="text"
+  [(ngModel)]="country"
+/>
+<input placeholder="Insert videogame image" type="text" [(ngModel)]="image" />
+<button (click)="createProduct()">Crear nuevo producto</button>
+
+<div *ngIf="createdProduct">Se ha cargado correctamente</div>
+
+<h2>Actualizar</h2>
+<div class="form-group">
+  <label for="id">Título del Producto a Actualizar:</label>
+  <input
+    type="string"
+    [(ngModel)]="titleToSearch"
+    placeholder="Título del Producto"
+  />
+  <button (click)="loadVideogameByTitle()">Buscar</button>
+</div>
+
+<div *ngIf="productToUpdate">
+  <input type="text" [(ngModel)]="titleToUpdate" />
+  <input placeholder="genre" type="text" [(ngModel)]="genreToUpdate" />
+  <input type="number" [(ngModel)]="yearToUpdate" />
+  <input
+    placeholder="Insert videogame country"
+    type="text"
+    [(ngModel)]="countryToUpdate"
+  />
+  <input placeholder="Insert videogame image" type="text" [(ngModel)]="imageToUpdate" />
+  <button (click)="updateProduct()">Actualizar el producto</button>
+</div>
