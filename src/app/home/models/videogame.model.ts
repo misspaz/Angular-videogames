@@ -1,5 +1,5 @@
 export interface IVideogame {
-  _id: number | undefined;
+  _id?: string;
   title: string;
   genre: string;
   year: number;

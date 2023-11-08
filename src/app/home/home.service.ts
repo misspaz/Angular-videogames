@@ -23,6 +23,10 @@ export class HomeService {
     return this.httpClient.get<IVideogame>(`${this.url}/${title}`);
   }
 
+  searchVideoGameById(id: number): Observable<IVideogame | null> {
+    return this.httpClient.get<IVideogame>(`${this.url}/${id}`);
+  }
+
   createProduct(product: IVideogame): Observable<IVideogame> {
     return this.httpClient.post<IVideogame>(
       `${this.url}/uploadvideogames`,
