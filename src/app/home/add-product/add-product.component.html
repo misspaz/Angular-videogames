@@ -1,4 +1,67 @@
-<h2>Sube un nuevo videojuego</h2>
+<form [formGroup]="videogameForm" (ngSubmit)="save()">
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" formControlName="title" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="genre">Genre</label>
+        <input type="text" id="genre" formControlName="genre" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label for="year">Year</label>
+        <input type="number" id="year" formControlName="year" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" id="country" formControlName="country" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label for="image">Imagen</label>
+        <input type="text" id="image" formControlName="image" class="form-control" required>
+    </div>
+    <button>Add new videogame</button>
+    <button>ResetForm</button>
+  </form>
+
+  <form [formGroup]="videogameForm" (ngSubmit)="update()">
+    <div class="form-group">
+      <label for="id">ID</label>
+      <input type="text" id="id" formControlName="_id" class="form-control" required>
+  </div>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" formControlName="title" class="form-control" required>
+  </div>
+  <div class="form-group">
+      <label for="genre">Genre</label>
+      <input type="text" id="genre" formControlName="genre" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+      <label for="year">Year</label>
+      <input type="number" id="year" formControlName="year" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+      <label for="country">Country</label>
+      <input type="text" id="country" formControlName="country" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+      <label for="image">Imagen</label>
+      <input type="text" id="image" formControlName="image" class="form-control" required>
+  </div>
+  <button type="submit">Modify videogame</button>
+  <button type="button" (click)="resetForm()">ResetForm</button>
+
+  </form>
+
+<!-- VERSIÓN ANTERIOR -->
+<!-- <h2>Sube un nuevo videojuego</h2>
 <input placeholder="Insert videogame title" type="text" [(ngModel)]="title" />
 <input placeholder="Insert videogame genre" type="text" [(ngModel)]="genre" />
 <input placeholder="Insert videogame year" type="number" [(ngModel)]="year" />
@@ -34,4 +97,5 @@
   />
   <input placeholder="Insert videogame image" type="text" [(ngModel)]="imageToUpdate" />
   <button (click)="updateProduct()">Actualizar el producto</button>
-</div>
+</div> -->
+
